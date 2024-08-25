@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '3.3.0'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+	implementation 'com.google.firebase:firebase-admin:9.3.0'
+	implementation 'com.google.cloud:google-cloud-firestore:3.0.5'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('bootJar') {
+	archiveFileName = 'nazelAPI.jar'
+}
+
+test {
+	useJUnitPlatform()
+}

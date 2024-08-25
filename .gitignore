@@ -1,0 +1,7 @@
+build/
+src/main/resources/firebase-key.json
+.env
+.git
+.idea
+.mvn
+.gradle
